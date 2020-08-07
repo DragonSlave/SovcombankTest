@@ -1,0 +1,45 @@
+<div>
+  <h2> Invitation list </h2>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <textarea class="form-control" placeholder="enter message" [(ngModel)]="message"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="enter phone" minlength="11" maxlength="11" pattern="[7]{1}[0-9]{10}" [(ngModel)]="phone" />
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="onClick()">
+            <span class="glyphicon glyphicon-ok">Add phone</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <ul class="list-group">
+    <li *ngFor="let phone of phones" class="list-group-item">
+      <span> {{ phone }} </span>
+    </li>
+  </ul>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="onSend()">
+            <span class="glyphicon glyphicon-ok">Send message</span>
+          </button>      
+      </div>
+    </div>
+  </div>
+
+</div>

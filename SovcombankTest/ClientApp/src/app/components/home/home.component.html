@@ -1,0 +1,17 @@
+<div>
+  <h2> Welcome to our party! </h2>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="enter phone" maxlength="11" pattern="[7]{1}[0-9]{10}" [(ngModel)]="phone" />
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="onApprove()">
+            <span class="glyphicon glyphicon-ok">Approve</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
